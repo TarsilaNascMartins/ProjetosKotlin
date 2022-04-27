@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/caderno_fundo" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="149dp"
+        android:layout_height="72dp"
+        app:layout_constraintBottom_toBottomOf="@+id/scorePC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/scoreUser"
+        app:srcCompat="@android:drawable/screen_background_dark_transparent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="252dp"
+        android:layout_height="203dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bresultado"
+        app:layout_constraintEnd_toEndOf="@+id/bresultado"
+        app:layout_constraintStart_toStartOf="@+id/bresultado"
+        app:layout_constraintTop_toTopOf="@+id/bresultado"
+        app:srcCompat="@drawable/fundo_image" />
+
+    <TextView
+        android:id="@+id/textResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Escolha uma opção abaixo"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.086" />
+
+    <ImageButton
+        android:id="@+id/bpedra"
+        android:layout_width="120dp"
+        android:layout_height="138dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="#00AFA8A8"
+        app:circularflow_radiusInDP="30dp"
+        app:layout_constraintEnd_toStartOf="@+id/bpapel"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bpapel"
+        app:srcCompat="@drawable/pedra" />
+
+    <ImageButton
+        android:id="@+id/bpapel"
+        android:layout_width="120dp"
+        android:layout_height="138dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/btesoura"
+        app:layout_constraintStart_toEndOf="@+id/bpedra"
+        app:layout_constraintTop_toBottomOf="@+id/textResultado"
+        app:srcCompat="@drawable/papel" />
+
+    <ImageButton
+        android:id="@+id/btesoura"
+        android:layout_width="120dp"
+        android:layout_height="138dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bpapel"
+        app:layout_constraintTop_toTopOf="@+id/bpapel"
+        app:srcCompat="@drawable/tesoura" />
+
+    <ImageView
+        android:id="@+id/bresultado"
+        android:layout_width="137dp"
+        android:layout_height="144dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:srcCompat="@drawable/papel" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:text="Escolha do app"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView5" />
+
+    <TextView
+        android:id="@+id/scoreUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="16dp"
+        android:text="Score Usuário:"
+        android:textColor="#FFFFFF"
+
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btesoura" />
+
+    <TextView
+        android:id="@+id/scorePC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:text="Score App:"
+        android:textColor="#FEFEFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scoreUser" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
